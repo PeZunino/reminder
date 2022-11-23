@@ -4,11 +4,8 @@
     "es2021": true
   },
   "extends": [
-    "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-    "plugin:import/recommended"
+    "plugin:@typescript-eslint/recommended"
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
@@ -24,6 +21,7 @@
     "import"
   ],
   "rules": {
+    "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-filename-extension": [
@@ -32,6 +30,7 @@
         "extensions": [".tsx"]
       }
     ],
+
     "import/extensions": [
       "error",
       "ignorePackages",
