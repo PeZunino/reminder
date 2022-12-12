@@ -8,7 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Josefin Sans', sans-serif;
     margin:0px;
     padding:0px;
-    background-color: #312e38;
+    background-color: #ffff;
   }
   
   a{text-decoration-style: none;}
