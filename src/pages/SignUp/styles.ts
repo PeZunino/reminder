@@ -1,44 +1,48 @@
 import styled from "styled-components";
+import meTime from "../../assets/mg_time.jpg";
 
 export const Container = styled.div`
-  display: flex;
   height: 100vh;
+  display: flex;
   align-items: stretch;
-  /* filter: brightness(90%) saturate(80%); */
-  /* 
-  div {
-    width: 100vw;
-    height: 100vh;
-    bottom: 0;
 
-    form {
-    }
-
-    h1 {
-      height: fit-content;
-      position: relative;
-      top: 15%;
-      font-family: "Domine", serif;
-      font-size: 50px;
-    }
-  } */
-`;
-
-export const Background = styled.div`
-  width: 50%;
-  img {
-    width: 100%;
+  input,
+  button {
+    font-size: 18px;
   }
 `;
 
+export const Background = styled.div`
+  flex: 1;
+  background: url(${meTime}) no-repeat center;
+  background-size: cover;
+`;
+
 export const Content = styled.div`
-  width: 50%;
-  background-color: #f0ffcb;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+
+  max-width: 750px;
+  width: 100%;
+  height: 800px;
+
+  background-color: #434147;
+  border-radius: 0 30px 30px 0;
+  padding: 100px;
+
+  margin: 10px 0 0 0;
   h1 {
-    position: relative;
-    top: 15%;
     font-family: "Domine", serif;
-    font-size: 50px;
-    justify-content: center;
+    font-size: 70px;
+    color: white;
+    border-bottom: 15px;
+    margin-bottom: 40px;
+  }
+  form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-right: 50px;
   }
 `;

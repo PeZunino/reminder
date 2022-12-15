@@ -1,31 +1,15 @@
 /* eslint-disable react/prop-types */
-import { InputHTMLAttributes, useCallback, useState } from "react";
+import React, { InputHTMLAttributes } from "react";
 import { InputContainer } from "./style";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  placeHolder: string;
+  title: string;
 }
-const Input: React.FC<InputProps> = ({ placeHolder }) => {
-  const [focus, setFocus] = useState(false);
 
-  const handleFocus = useCallback(() => {
-    setFocus(true);
-    console.log("focus", focus);
-  }, []);
-
-  const handleBlur = useCallback(() => {
-    setFocus(false);
-    console.log(focus);
-  }, []);
-
+const Input: React.FC<InputProps> = ({ title }) => {
   return (
-    <InputContainer isFocus={focus}>
-      <input
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        placeholder={placeHolder}
-        type="text"
-      />
+    <InputContainer>
+      <input type="text" placeholder={title} />
     </InputContainer>
   );
 };

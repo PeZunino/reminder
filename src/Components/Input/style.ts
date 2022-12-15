@@ -1,27 +1,16 @@
 import styled, { css } from "styled-components";
 
-interface InputContainerProp {
-  isFocus: boolean;
-}
-
-export const InputContainer = styled.div<InputContainerProp>`
-  color: #dee2e6;
-  border-bottom: 3px solid #dee2e6;
-
-  height: 40px;
-
-  display: flex;
-  align-items: flex-end;
-  margin-right: 15px;
-
+export const InputContainer = styled.div`
+  border-radius: 15px;
+  background-color: #2c2b2f;
+  border: 2px black solid;
+  height: 50px;
+  padding: 10px;
+  margin-top: 20px;
   input {
-    color: #dee2e6;
-    font-size: 20px;
-  }
+    color: white;
+    align-items: center;
 
-  ${props =>
-    props.isFocus &&
-    css`
-      border-color: #658e9c;
-    `}
+    width: 100%;
+  }
 `;
