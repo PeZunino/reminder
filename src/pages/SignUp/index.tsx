@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../../Components/Button";
 import Input from "../../Components/Input";
 import { Background, Container, Content } from "./styles";
+import meTime from "../../assets/mg_time.jpg";
 
 const SignUp: React.FC = () => {
   return (
@@ -16,13 +17,8 @@ const SignUp: React.FC = () => {
             <Button> Entrar </Button>
           </form>
         </Content>
-        <Background>{/* <img src={meTime} alt="metime" /> */}</Background>
 
-        {/* <div>
-
-          <form action="submit"></form>
-        </div> */}
-        {/* <div></div> */}
+        <img src={meTime} alt="" />
       </Container>
     </>
   );

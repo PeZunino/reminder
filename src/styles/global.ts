@@ -8,7 +8,6 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Josefin Sans', sans-serif;
     margin:0px;
     padding:0px;
-    background-color: #859efa;
   }
   
   a{text-decoration-style: none;}

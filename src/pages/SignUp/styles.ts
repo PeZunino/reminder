@@ -1,21 +1,27 @@
 import styled from "styled-components";
-import meTime from "../../assets/mg_time.jpg";
 
 export const Container = styled.div`
   height: 100vh;
   display: flex;
   align-items: stretch;
+  background-color: #8b9ffe;
 
   input,
   button {
     font-size: 18px;
   }
+  img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 700px;
+  }
 `;
 
 export const Background = styled.div`
   flex: 1;
-  background: url(${meTime}) no-repeat center;
-  background-size: cover;
+  overflow: hidden;
 `;
 
 export const Content = styled.div`
