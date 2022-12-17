@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import Tooltip from "../Tooltip";
 
 interface InputContainerProps {
   isFocused: boolean;
@@ -33,6 +34,7 @@ export const InputContainer = styled.div<InputContainerProps>`
     css`
       border: 2px black solid;
       background-color: #2c2b2f;
+      color: white;
     `}
 
   ${props =>
@@ -50,4 +52,20 @@ export const InputContainer = styled.div<InputContainerProps>`
       background-color: #2c2b2f;
       color: #cb3436;
     `}
+`;
+
+export const Error = styled(Tooltip)`
+  margin-left: 16px;
+  height: 20px;
+  svg {
+    margin: 0px;
+  }
+  span {
+    background: #c53030;
+    color: #fff;
+
+    &::before {
+      border-color: #c53030 transparent;
+    }
+  }
 `;

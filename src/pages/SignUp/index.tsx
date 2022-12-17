@@ -50,7 +50,7 @@ const SignUp: React.FC = () => {
               type="password"
               title="Senha"
             />
-            <Button type="submit">Entrar</Button>
+            <Button type="submit">Cadastrar</Button>
           </Form>
         </Content>
 
