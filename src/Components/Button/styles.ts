@@ -11,10 +11,8 @@ export const ButtonContainer = styled.button`
   font-weight: 500;
   margin-top: 45px;
   transition: background-color 0.2s;
-  filter: grayscale(105%);
 
   &:hover {
     box-shadow: 0 0 30px #ff9000;
-    filter: grayscale(0%);
   }
 `;

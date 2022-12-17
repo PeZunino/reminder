@@ -27,10 +27,9 @@ export const Background = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  align-items: center;
 
   max-width: 750px;
-  width: 100%;
   height: 800px;
 
   background-color: #434147;
@@ -49,6 +48,6 @@ export const Content = styled.div`
     display: flex;
     width: 100%;
     flex-direction: column;
-    padding-right: 50px;
+    padding: 0 50px 0 50px;
   }
 `;
