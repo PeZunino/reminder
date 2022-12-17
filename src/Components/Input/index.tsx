@@ -5,8 +5,9 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { InputContainer } from "./style";
+import { InputContainer, Error } from "./style";
 import { IconBaseProps } from "react-icons/lib";
+import { IoMdAlert } from "react-icons/io";
 import { useField } from "@unform/core";
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   title: string;
@@ -55,6 +56,12 @@ const Input: React.FC<InputProps> = ({ title, name, icon: Icon, ...rest }) => {
         type={rest && rest.type}
         placeholder={title}
       />
+
+      {error && (
+        <Error title={error}>
+          <IoMdAlert />
+        </Error>
+      )}
     </InputContainer>
   );
 };

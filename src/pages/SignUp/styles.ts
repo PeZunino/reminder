@@ -48,6 +48,6 @@ export const Content = styled.div`
     display: flex;
     width: 100%;
     flex-direction: column;
-    padding: 0 50px 0 50px;
+    padding: 0 70px 0 70px;
   }
 `;

@@ -12,7 +12,6 @@ import ValidateErrors from "../../utils/validateErrors";
 
 const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
-  const [buttonIsLock, setButtonIsLock] = useState(true);
 
   const handleSubmit = useCallback(async (data: object) => {
     try {
@@ -22,13 +21,11 @@ const SignUp: React.FC = () => {
           .string()
           .required("E-mail é obrigatório")
           .email("Digite um e-mail válido"),
-        password: yup.string().min(8).required("Senha é obrigatória"),
+        password: yup.string().min(8, "Senha de no mínimo 8 dígitos"),
       });
 
       await schema.validate(data, { abortEarly: false });
     } catch (errs) {
-      setButtonIsLock(true);
-
       const erros = ValidateErrors(errs as yup.ValidationError);
 
       formRef.current?.setErrors(erros);
@@ -50,7 +47,7 @@ const SignUp: React.FC = () => {
               type="password"
               title="Senha"
             />
-            <Button type="submit">Entrar</Button>
+            <Button type="submit">Cadastrar</Button>
           </Form>
         </Content>
 
