@@ -1,18 +1,17 @@
 import styled from "styled-components";
 
 export const ButtonContainer = styled.button`
-  background: #ff9000;
+  background: #2b88ee;
   height: 56px;
   border-radius: 10px;
   border: 0;
   padding: 0 16px;
-  color: #312e38;
+  color: white;
   width: 100%;
   font-weight: 500;
-  margin-top: 45px;
-  transition: background-color 0.2s;
-
+  filter: brightness(110%);
+  transition: background-color 0.1s ease-out 0s;
   &:hover {
-    box-shadow: 0 0 30px #ff9000;
+    filter: brightness(90%);
   }
 `;

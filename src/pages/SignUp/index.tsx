@@ -1,8 +1,9 @@
 import React, { useCallback, useRef, useState } from "react";
 import Button from "../../Components/Button";
 import Input from "../../Components/Input";
-import { Container, Content } from "./styles";
-import meTime from "../../assets/mg_time.jpg";
+import { Background, Container, Content } from "./styles";
+import organize from "../../assets/organize.jpg";
+import time_mg from "../../assets/time_mg.jpg";
 import { AiOutlineUser, AiOutlineMail } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { Form } from "@unform/web";
@@ -37,7 +38,8 @@ const SignUp: React.FC = () => {
     <>
       <Container>
         <Content>
-          <h1>Faça seu log in.</h1>
+          <h1>Sign up for your account</h1>
+
           <Form ref={formRef} onSubmit={handleSubmit}>
             <Input name="user" icon={AiOutlineUser} title="Nome" />
             <Input name="email" icon={AiOutlineMail} title="E-mail" />
@@ -49,9 +51,14 @@ const SignUp: React.FC = () => {
             />
             <Button type="submit">Cadastrar</Button>
           </Form>
+          <span>
+            Already have an account? <a>Sign in</a>
+          </span>
         </Content>
-
-        <img src={meTime} alt="" />
+        <Background>
+          <img src={organize} alt="" />
+          <img src={time_mg} alt="" />
+        </Background>
       </Container>
     </>
   );

@@ -5,7 +5,7 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   body{
-    font-family: 'Josefin Sans', sans-serif;
+    /* font-family: 'Josefin Sans', sans-serif; */
     margin:0px;
     padding:0px;
   }
@@ -16,9 +16,7 @@ export const GlobalStyles = createGlobalStyle`
     cursor: pointer;
   }
 
-  textarea{
-    font-family: 'Roboto Slab', serif;
-  }
+  
   input, textarea{
     
     border: 0;

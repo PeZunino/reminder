@@ -8,48 +8,54 @@ interface InputContainerProps {
 }
 
 export const InputContainer = styled.div<InputContainerProps>`
-  display: flex;
-  align-items: center;
-  color: #b3b2b5;
-  background-color: #737177;
-
-  border-radius: 15px;
   height: 50px;
   padding: 10px;
-  margin-top: 20px;
+  width: 100%;
 
+  border: 3px solid #dfe1e6;
+  border-radius: 5px;
+  color: #5e6c84;
+
+  display: flex;
+  align-items: center;
   svg {
     margin-right: 10px;
   }
 
   input {
-    color: white;
+    color: inherit;
     align-items: center;
-
     width: 100%;
   }
+
+  ${props =>
+    !props.isErrored &&
+    css`
+      :hover {
+        background-color: #edeef2;
+      }
+    `}
 
   ${props =>
     props.isFocused &&
     css`
       border: 2px black solid;
-      background-color: #2c2b2f;
-      color: white;
+      background-color: #edeef2;
+      color: black;
     `}
 
   ${props =>
     props.isFilled &&
     css`
-      border: 2px black solid;
-      background-color: #2c2b2f;
-      color: white;
+      background-color: #edeef2;
+      color: black;
     `}
 
     ${props =>
     props.isErrored &&
     css`
       border: 2px #cb3436 solid;
-      background-color: #2c2b2f;
+      background-color: #ffd7d7;
       color: #cb3436;
     `}
 `;
